@@ -1,0 +1,18 @@
+
+
+
+body {
+  color: black;
+  /* background: rgb(22,121,9);
+  background: linear-gradient(90deg, rgba(22,121,9,1) 0%, rgba(136,195,82,1) 0%, rgba(100,40,138,1) 0%, rgba(35,6,31,1) 61%); */
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
