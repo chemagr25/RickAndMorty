@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
 import CharactersAll from "@/views/CharactersAll.vue";
+import LocationsAll from "@/views/LocationsAll.vue";
 
 const routes = [
   {
@@ -15,7 +16,7 @@ const routes = [
   {
     path: "/locations",
     name: "all-locations",
-    component: CharactersAll,
+    component: LocationsAll,
   },
 ];
 

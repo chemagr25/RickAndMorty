@@ -12,6 +12,8 @@ export const useCharacter = () => {
 
     const { data } = await apiResources.get(`/character/?page=${page}`);
 
+    console.log(data)
+
     const { info, results } = data;
 
 

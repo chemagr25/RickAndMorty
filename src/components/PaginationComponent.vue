@@ -3,17 +3,11 @@
 import { ref } from 'vue';
 const props = defineProps(['totalPages', 'currentPage'])
 const emit = defineEmits(['prevPage', 'nextPage'])
-
-
 const currentPage = ref(1)
-
-
 const prevPage = () => {
   if (currentPage.value == 1) return
   currentPage.value--
   emit('prevPage', currentPage.value)
-
-
 }
 
 const nextPage = () => {
@@ -21,8 +15,6 @@ const nextPage = () => {
   currentPage.value++
   emit('nextPage', currentPage.value)
 }
-
-
 </script>
 
 <template>
