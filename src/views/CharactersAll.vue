@@ -5,7 +5,7 @@ import CardCharacter from '@/components/CardCharacter.vue';
 import PaginationComponent from '@/components/PaginationComponent.vue'
 
 import { useCharacter } from '@/composables/useCharacter'
-const { getCharacters, characters, isLoading } = useCharacter()
+const { getCharacters, characters, isLoading, totalPages } = useCharacter()
 
 
 onMounted(async () => {
@@ -34,7 +34,7 @@ const nextPage = (n) => {
 
     <div class="characters grid-cols-4  justify-items-center gap-8 w-full grid p-12">
       <CardCharacter class="col-span-4 md:col-span-2 lg:col-span-1" v-for="character in characters" :key="character.id"
-        :img="character.image" :name="character.name" :specie="character.species" :location="character.location.name"
+        :img="character.image" :name="character.name" :specie="character.species" :id="character.id" :location="character.location.name"
         :origin="character.origin.name"
         />
     </div>
@@ -43,7 +43,7 @@ const nextPage = (n) => {
   </div>
   <div class="my-8 w-full flex justify-center">
 
-    <PaginationComponent v-show="!isLoading" :total-pages="42" @prevPage="prevPage" @nextPage="nextPage" />
+    <PaginationComponent v-show="!isLoading" :total-pages="totalPages" @prevPage="prevPage" @nextPage="nextPage" />
 
   </div>
 </template>
