@@ -15,7 +15,6 @@ export const useCharacter = () => {
 
     try {
       const { data } = await apiResources.get(`/character/?page=${page}`);
-      console.log(data);
       const { info, results } = data;
       totalPages.value = info.pages;
       characters.value = results;
@@ -51,7 +50,6 @@ export const useCharacter = () => {
       totalPages.value = info.pages;
       characters.value = results;
 
-      console.log(data.results);
     } catch {
       characters.value = [];
       totalPages.value = 0;
