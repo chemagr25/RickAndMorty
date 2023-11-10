@@ -4,7 +4,8 @@ import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { useCharacter } from '@/composables/useCharacter';
 import LoaderComponent from '@/components/LoaderComponent.vue';
-
+import NavigationButtons from '@/components/NavigationButtons.vue'
+import searchComponent from '@/components/searchComponent.vue';
 import CardEpisode from '@/components/CardEpisode.vue';
 
 const { getCharacterById, characterById, characterEpisodes, isLoading } = useCharacter()
@@ -25,6 +26,9 @@ onMounted(async () => {
     </div>
 
     <div v-else class="main-content w-full justify-center p-4 flex mt-24 ">
+
+
+ 
         <div
             class="details flex  flex-col flex-wrap bg-white/20  animate-fade p-4 animate-duration-1000 w-full md:w-3/4 rounded-xl border-white/30 border hover:cursor-pointer shadow-xl text-white text-lg ">
             <div class="charcter-info   flex-col flex lg:flex-row gap-5 ">

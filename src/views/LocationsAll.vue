@@ -4,6 +4,8 @@ import CardLocation from '@/components/CardLocation.vue';
 import PaginationComponent from '@/components/PaginationComponent.vue'
 import { useLocation } from '@/composables/useLocation'
 import LoaderComponent from '@/components/LoaderComponent.vue';
+import NavigationButtons from '@/components/NavigationButtons.vue'
+import searchComponent from '@/components/searchComponent.vue';
 
 const { getAllLocations, locations, isLoading } = useLocation()
 
@@ -25,12 +27,19 @@ const nextPage = async (n) => {
     <LoaderComponent class="mt-32" />
   </div>
   <div v-else>
+    <div class=" flex-col  flex lg:flex-row justify-between items-center  px-12">
+    <NavigationButtons />
+    <div  class="w-full md:w-1/4 flex flex-col max-h-12">
+        <searchComponent/>
+    </div>
 
-    <div class="characters grid-cols-4 text-white justify-items-center gap-8 w-full grid p-12">
 
 
+  </div>
 
-      <CardLocation class="col-span-4 md:col-span-2 lg:col-span-1" v-for="location in locations" :key="location.id"
+    <div class="characters grid-cols-3 text-white place-content-center justify-items-center gap-8 w-full grid p-12">
+
+      <CardLocation class="col-span-3 md:col-span-3 lg:col-span-1" v-for="location in locations" :key="location.id"
         :name="location.name" :type="location.type" :dimension="location.dimension" />
 
     </div>

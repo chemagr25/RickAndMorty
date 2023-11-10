@@ -10,15 +10,15 @@ import searchComponent from '@/components/searchComponent.vue';
   <div class="w-full justify-center flex">
     <img src="./img/logo.png" class="w-1/2 lg:w-1/3 logo" alt="">
   </div>
-  <div class=" flex-col  flex lg:flex-row justify-between items-center  px-12">
+  <!-- <div class=" flex-col  flex lg:flex-row justify-between items-center  px-12">
     <NavigationButtons />
-    <div  class="w-1/4 flex flex-col max-h-12">
+    <div  class="w-full md:w-1/4 flex flex-col max-h-12">
         <searchComponent/>
     </div>
 
 
 
-  </div>
+  </div> -->
   <router-view></router-view>
 </template>
 

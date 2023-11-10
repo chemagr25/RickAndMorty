@@ -3,7 +3,8 @@ import { onMounted, ref } from 'vue';
 import LoaderComponent from '@/components/LoaderComponent.vue';
 import CardCharacter from '@/components/CardCharacter.vue';
 import PaginationComponent from '@/components/PaginationComponent.vue'
-
+import NavigationButtons from '@/components/NavigationButtons.vue'
+import searchComponent from '@/components/searchComponent.vue';
 import { useCharacter } from '@/composables/useCharacter'
 const { getCharacters, characters, isLoading, totalPages } = useCharacter()
 
@@ -30,6 +31,13 @@ const nextPage = (n) => {
     <LoaderComponent class="mt-32" />
   </div>
   <div v-else>
+    <div class=" flex-col  flex lg:flex-row justify-between items-center  px-12">
+    <NavigationButtons />
+    <div  class="w-full md:w-1/4 flex flex-col max-h-12">
+        <searchComponent/>
+    </div>
+
+  </div>
 
 
     <div class="characters grid-cols-4  justify-items-center gap-8 w-full grid p-12">
